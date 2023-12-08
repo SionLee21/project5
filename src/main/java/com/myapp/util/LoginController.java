@@ -1,7 +1,7 @@
-package myapp.util;
+package com.myapp.util;
 
-import myapp.user.UserServiceImpl;
-import myapp.user.UserVO;
+import com.myapp.user.UserServiceImpl;
+import com.myapp.user.UserVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

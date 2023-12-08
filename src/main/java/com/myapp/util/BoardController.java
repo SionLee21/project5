@@ -1,7 +1,7 @@
-package myapp.util;
+package com.myapp.util;
 
-import myapp.board.BoardServiceImpl;
-import myapp.board.BoardVO;
+import com.myapp.board.BoardServiceImpl;
+import com.myapp.board.BoardVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

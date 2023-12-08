@@ -1,4 +1,4 @@
-package myapp.board;
+package com.myapp.board;
 
 import java.sql.Date;
 

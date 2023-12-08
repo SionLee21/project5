@@ -1,4 +1,4 @@
-package myapp.util;
+package com.myapp.util;
 
 public class HomeController {
 }
