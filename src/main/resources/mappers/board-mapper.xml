@@ -3,34 +3,36 @@
 <mapper namespace="Board">
     <insert id="insertBoard">
         <![CDATA[
-        INSERT INTO BOARD (title, content, writer)
-        VALUES (#{title}, #{content}, #{writer})
+        INSERT INTO Board (productName, price, category, location, description, sellerId, imageUrl, registrationDate, condition)
+        VALUES (#{productName}, #{price}, #{category}, #{location}, #{description}, #{sellerId}, #{imageUrl}, #{registrationDate}, #{condition})
         ]]>
     </insert>
     <update id="updateBoard">
         <![CDATA[
-        UPDATE BOARD
-        SET title = #{title}, writer = #{writer}, content = #{content}
+        UPDATE Board
+        SET productName = #{productName}, price = #{price}, category = #{category}, location = #{location},
+            description = #{description}, sellerId = #{sellerId}, imageUrl = #{imageUrl},
+            registrationDate = #{registrationDate}, condition = #{condition}
         WHERE seq = #{seq}
         ]]>
     </update>
     <delete id="deleteBoard">
         <![CDATA[
-        DELETE FROM BOARD
+        DELETE FROM Board
         WHERE seq = #{seq}
         ]]>
     </delete>
-    <select id="getBoard" resultType="board">
+    <select id="getBoard" resultType="BoardVO">
         <![CDATA[
         SELECT *
-        FROM BOARD
+        FROM Board
         WHERE seq = #{seq}
         ]]>
     </select>
-    <select id="getBoardList" resultType="board">
+    <select id="getBoardList" resultType="BoardVO">
         <![CDATA[
         SELECT *
-        FROM BOARD
+        FROM Board
         ORDER BY seq DESC
         ]]>
     </select>
